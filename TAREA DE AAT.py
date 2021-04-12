@@ -6,22 +6,15 @@ def tableroVacio():
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
-    ]
-
-def VerificarColumna(columna):
-    if 1<= columna <=7:
-        return True
-    else:
-        print("¡El valor de columna", columna, ", es invalido !")
-        return False
-
+        ]
+    
+            
 def soltarFichaEnColumna(ficha,columna,tablero):
-    if VerificarColumna(columna):
-        for fila in range(6,0,-1):
-            if tablero[fila-1][columna-1]==0:
-                tablero[fila-1][columna-1]=ficha
-                return
-
+    for fila in range(6,0,-1):
+        if tablero[fila-1][columna-1]==0:
+            tablero[fila-1][columna-1]=ficha
+            return
+    
 
 def completarTableroEnOrden(secuencia,tablero):
     ficha = 1
@@ -45,6 +38,14 @@ def dibujarTablero(tablero):
         print()
 
 
-secuencia = [1,2,3,1,4,6,9]
+def VerificarSecuencia(secuencia):
+    for ver in secuencia:
+        if(ver < 1 or ver > 7):
+            print("¡La secuncia ingresada es invalida !")
+            return False
+    return True
 
-dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+        
+secuencia = [1,2,3,1,4,6,8]      
+if (VerificarSecuencia(secuencia)):
+    dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
