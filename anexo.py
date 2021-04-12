@@ -36,6 +36,16 @@ def dibujarTablero(tablero):
             else:
                 print(end='')
         print()
-      
-secuencia = [1,2,3,1,4,6]      
-dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+
+
+def VerificarSecuencia(secuencia):
+    for ver in secuencia:
+        if(ver < 1 or ver > 7):
+            print("¡La secuncia ingresada es invalida !")
+            return False
+    return True
+
+        
+secuencia = [1,2,3,1,4,6,8]      
+if (VerificarSecuencia(secuencia)):
+    dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
