@@ -52,6 +52,11 @@ def VerificarSecuencia(secuencia):
     return True
 
         
-secuencia = [1,2,3,1,4,6,8]      
+secuencia = [1,2,3,1,4,6]
+
+tablero = []
 if (VerificarSecuencia(secuencia)):
-    dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+    tablero = completarTableroEnOrden(secuencia, tableroVacio())
+    dibujarTablero(tablero)
+
+print(contenidoColumna(1, tablero))
