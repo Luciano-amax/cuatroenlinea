@@ -7,6 +7,12 @@ def tableroVacio():
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         ]
+def contenidoColumna(num, tablero):
+    columna = []
+    for fila in tablero:
+        celda = fila[num -1]
+        columna.append(celda)
+    return columna
     
             
 def soltarFichaEnColumna(ficha,columna,tablero):
