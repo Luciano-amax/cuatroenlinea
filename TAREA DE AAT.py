@@ -7,12 +7,19 @@ def tableroVacio():
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         ]
-def contenidoColumna(num, tablero):
+def contenidoColumna(numc, tablero):
     columna = []
     for fila in tablero:
-        celda = fila[num -1]
+        celda = fila[numc -1]
         columna.append(celda)
     return columna
+
+def contenidofila(numf, tablero):
+    fila = []
+    for columna in range (6,0,-1):
+        celda = tablero[numf - 1][columna-1]
+        fila.append(celda)
+    return fila
     
             
 def soltarFichaEnColumna(ficha,columna,tablero):
@@ -60,3 +67,4 @@ if (VerificarSecuencia(secuencia)):
     dibujarTablero(tablero)
 
 print(contenidoColumna(1, tablero))
+print(contenidofila(6, tablero))
