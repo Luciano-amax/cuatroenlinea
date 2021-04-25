@@ -35,16 +35,14 @@ def todasfilas(tablero):
         print()
 
 def todascolumnas(tablero):
-    columnasVacias=[]
     for columna in range(0,6,1):
         for fila in range(0,6,1):
-            columnasVacias.append(tablero[fila][columna])
             celda=tablero[fila][columna]
             if(celda):
                 print(celda,end='')
             else:
                 print('0')
-        print()
+        print(" \n ")
     
 
 
