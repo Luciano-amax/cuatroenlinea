@@ -67,13 +67,17 @@ def completarTableroEnOrden(secuencia,tablero):
 
 def dibujarTablero(tablero):
     for fila in range(0,6,1):
+        print("|",end="")
         for columna in range(0,6,1):
             celda=tablero[fila][columna]
             if(celda):
                 print(celda,end='')
             else:
-                print(end='')
-        print()
+                print(" ",end="")
+        print("|",end="")
+        print();
+    print("+-------+", end="")
+    return
 
 
 def VerificarSecuencia(secuencia):
