@@ -87,8 +87,12 @@ def VerificarSecuencia(secuencia):
             return False
     return True
 
-        
-secuencia = [1,2,3,1,4,6]
+
+secuencia_texto = input("Ingrese la secuencia de numero: ")        
+secuencia = []
+for items in secuencia_texto.split(','):
+    secuencia.append(int(items))
+
 
 tablero = []
 if (VerificarSecuencia(secuencia)):
