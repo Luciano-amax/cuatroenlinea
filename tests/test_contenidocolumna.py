@@ -10,4 +10,4 @@ def test_contcolumnas():
    [1,2,0,0,0,0,0],
   ]
 
-columnas=[0,0,1,1,1,1] == contenidoColumna(1,tablero)
+    columnas=[0,0,1,1,1,1] == contenidoColumna(1,tablero)
